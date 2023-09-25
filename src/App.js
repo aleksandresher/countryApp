@@ -47,8 +47,8 @@ function App() {
 
   useEffect(() => {
     dispatch(setCountryName(selectedCountry));
-    setCurrencyActive("true");
-    setAirportActive("false");
+    setCurrencyActive(true);
+    setAirportActive(false);
   }, [selectedCountry, dispatch]);
 
   useEffect(() => {
@@ -171,7 +171,7 @@ const Btn1 = styled.button`
   background: none;
   font-weight: 400;
   cursor: pointer;
-  color: ${(props) => (props.show === "true" ? "#1976D2" : "#000")};
+  color: ${(props) => (props.show? "#1976D2" : "#000")};
 `;
 
 const Btn2 = styled.a`
@@ -182,5 +182,5 @@ const Btn2 = styled.a`
   background: none;
   font-weight: 400;
   cursor: pointer;
-  color: ${(props) => (props.show === "true" ? "#1976D2" : "#000")};
+  color: ${(props) => (props.show? "#1976D2" : "#000")};
 `;
